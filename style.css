@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --dark-color: #000;
+  --dark-color: #fdfff0;
 }
 body {
   display: flex;
@@ -972,4 +972,313 @@ body {
 }
 .not-loaded * {
   animation-play-state: paused !important;
+}
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #f0f8ff; /* Lighter background */
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  perspective: 1000px;
+  padding: 50px 0px;
+}
+
+.flowers {
+  position: relative;
+  transform: scale(0.9);
+}
+
+.flower {
+  position: absolute;
+  bottom: 10vmin;
+  transform-origin: bottom center;
+  z-index: 10;
+  --fl-speed: 0.8s;
+}
+
+/* Flower petals */
+.flower__leaf {
+  background-color: #ffb6c1; /* Light Pink */
+  background-image: linear-gradient(to top, #ffe4e1, #ffb6c1); /* Pastel Pink */
+}
+
+/* Yellow center */
+.flower__white-circle {
+  background-color: #fffacd; /* Lemon Chiffon */
+}
+
+.flower__line {
+  height: 55vmin;
+  width: 1.5vmin;
+  background-image: linear-gradient(to top, transparent 10%, #5bc8af, #add8e6); /* Soft blue and teal for stems */
+}
+
+/* Grass */
+.flower__grass--1, .flower__grass--2 {
+  --c: #98fb98; /* Pale Green for fresh tone */
+}
+
+.flower__grass__leaf {
+  background-image: linear-gradient(to top, transparent, #98fb98); /* Pale green for a brighter feel */
+}
+
+.flower__light {
+  background-color: #fdd835; /* Bright yellow for lights */
+}
+
+.flower__leaf {
+  box-shadow: none; /* Remove any inset shadow */
+}
+
+.flower__grass__overlay {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighten the overlay */
+}
+
+.flower--4 {
+  left: 10%;
+  transform: rotate(5deg);
+  animation: moving-flower-4 4s linear infinite;
+}
+
+.flower--5 {
+  left: 20%;
+  transform: rotate(-10deg);
+  animation: moving-flower-5 4s linear infinite;
+}
+
+.flower--6 {
+  left: 70%;
+  transform: rotate(15deg);
+  animation: moving-flower-6 4s linear infinite;
+}
+
+.flower--7 {
+  left: 80%;
+  transform: rotate(-5deg);
+  animation: moving-flower-7 4s linear infinite;
+}
+
+.flower--8 {
+  left: 30%;
+  transform: rotate(10deg);
+  animation: moving-flower-8 4s linear infinite;
+}
+
+.flower--9 {
+  left: 90%;
+  transform: rotate(-20deg);
+  animation: moving-flower-9 4s linear infinite;
+}
+.flower--4 {
+  animation: moving-flower-4 4s linear infinite;
+}
+.flower--4 .flower__line {
+  height: 65vmin;
+  animation-delay: 0.4s;
+}
+.flower--4 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 1.7s backwards;
+}
+.flower--4 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 1.5s backwards;
+}
+.flower--4 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.3s backwards;
+}
+.flower--4 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.1s backwards;
+}
+.flower--4 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 1.9s backwards;
+}
+.flower--4 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.1s backwards;
+}
+
+.flower--5 {
+  animation: moving-flower-5 4s linear infinite;
+}
+.flower--5 .flower__line {
+  height: 60vmin;
+  animation-delay: 0.5s;
+}
+.flower--5 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
+}
+.flower--5 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
+}
+.flower--5 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.4s backwards;
+}
+.flower--5 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
+}
+.flower--5 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 2s backwards;
+}
+.flower--5 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.2s backwards;
+}
+
+.flower--6 {
+  animation: moving-flower-6 4s linear infinite;
+}
+.flower--6 .flower__line {
+  height: 55vmin;
+  animation-delay: 0.6s;
+}
+.flower--6 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 1.9s backwards;
+}
+.flower--6 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 1.7s backwards;
+}
+.flower--6 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.5s backwards;
+}
+.flower--6 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.3s backwards;
+}
+.flower--6 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 2.1s backwards;
+}
+.flower--6 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.3s backwards;
+}
+
+.flower--7 {
+  animation: moving-flower-7 4s linear infinite;
+}
+.flower--7 .flower__line {
+  height: 50vmin;
+  animation-delay: 0.7s;
+}
+.flower--7 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 2s backwards;
+}
+.flower--7 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
+}
+.flower--7 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.6s backwards;
+}
+.flower--7 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.4s backwards;
+}
+.flower--7 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+}
+.flower--7 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.4s backwards;
+}
+
+.flower--8 {
+  animation: moving-flower-8 4s linear infinite;
+}
+.flower--8 .flower__line {
+  height: 45vmin;
+  animation-delay: 0.8s;
+}
+.flower--8 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 2.1s backwards;
+}
+.flower--8 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 1.9s backwards;
+}
+.flower--8 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.7s backwards;
+}
+.flower--8 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.5s backwards;
+}
+.flower--8 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 2.3s backwards;
+}
+.flower--8 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.5s backwards;
+}
+
+.flower--9 {
+  animation: moving-flower-9 4s linear infinite;
+}
+.flower--9 .flower__line {
+  height: 40vmin;
+  animation-delay: 0.9s;
+}
+.flower--9 .flower__line__leaf--1 {
+  animation: blooming-leaf-right var(--fl-speed) 2.2s backwards;
+}
+.flower--9 .flower__line__leaf--2 {
+  animation: blooming-leaf-right var(--fl-speed) 2s backwards;
+}
+.flower--9 .flower__line__leaf--3 {
+  animation: blooming-leaf-left var(--fl-speed) 1.8s backwards;
+}
+.flower--9 .flower__line__leaf--4 {
+  animation: blooming-leaf-left var(--fl-speed) 1.6s backwards;
+}
+.flower--9 .flower__line__leaf--5 {
+  animation: blooming-leaf-right var(--fl-speed) 2.4s backwards;
+}
+.flower--9 .flower__line__leaf--6 {
+  animation: blooming-leaf-left var(--fl-speed) 2.6s backwards;
+}
+/* 5 Pink Flowers */
+.flower--1 .flower__leaf {
+  background-color: #FDC6C6; /* Light Pink */
+  background-image: linear-gradient(to top, #FAD0D0, #FDC6C6);
+}
+
+.flower--4 .flower__leaf {
+  background-color: #FFA3D0; /* Medium Pink */
+  background-image: linear-gradient(to top, #FF6FAF, #FFA3D0);
+}
+
+.flower--5 .flower__leaf {
+  background-color: #FFC1E3; /* Soft Pink */
+  background-image: linear-gradient(to top, #FF99C2, #FFC1E3);
+}
+
+.flower--7 .flower__leaf {
+  background-color: #FF99B4; /* Bright Pink */
+  background-image: linear-gradient(to top, #FF6F91, #FF99B4);
+}
+
+.flower--9 .flower__leaf {
+  background-color: #FFD6DA; /* Very Light Pink */
+  background-image: linear-gradient(to top, #FFC5C9, #FFD6DA);
+}
+
+/* 2 Purple Flowers */
+.flower--2 .flower__leaf {
+  background-color: #D1A6FF; /* Light Purple */
+  background-image: linear-gradient(to top, #B98EFF, #D1A6FF);
+}
+
+.flower--8 .flower__leaf {
+  background-color: #B58CFF; /* Deep Purple */
+  background-image: linear-gradient(to top, #A56FF0, #B58CFF);
+}
+
+/* 2 Orange Flowers */
+.flower--3 .flower__leaf {
+  background-color: #FFD1B3; /* Soft Orange */
+  background-image: linear-gradient(to top, #FFBB8C, #FFD1B3);
+}
+
+.flower--6 .flower__leaf {
+  background-color: #FFCC99; /* Bright Orange */
+  background-image: linear-gradient(to top, #FFA366, #FFCC99);
 }
